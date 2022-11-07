@@ -9,7 +9,9 @@ const models ={
     departmentsModel: require('./noSql/departments'),    
     marital_statesModel: require('./noSql/marital_states'), 
     nationalitysModel: require('./noSql/nationalitys'),  
-    municipialitysModel: require('./noSql/municipialitys'),  
+    municipialitysModel: require('./noSql/municipialitys'), 
+    load_massivesModel: require('./noSql/load_massives'),  
+
 
 
 
