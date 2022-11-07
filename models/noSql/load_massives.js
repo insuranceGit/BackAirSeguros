@@ -8,74 +8,74 @@ const Load_massiveScheme = new mongoose.Schema(
         cellphone:{
             type:Number
         },
-        contractType:{
-            type:Number
+        id_contractType:{
+            type:mongoose.Types.ObjectId
         },
         dateAdmission:{
-            type:Number
+            type:Date
         },
         dateBirth:{
-            type:Number
+            type:Date
         },
-        department:{
-            type:Number
+        id_department:{
+            type:mongoose.Types.ObjectId
         },
         document:{
             type:Number
         },
         email:{
-            type:Number
+            type:String
         },
         eps:{
-            type:Number
+            type:String
         },
         first_last_name:{
-            type:Number
+            type:String
         } ,
         first_name:{
-            type:Number
+            type:String
         } ,
-        gender:{
-            type:Number
+        id_gender:{
+            type:mongoose.Types.ObjectId
         } ,
         hoursWorkedMonth:{
             type:Number
         } ,
         id_documentType:{
-            type:Number
+            type:mongoose.Types.ObjectId
         } ,
         id_municipality:{
-            type:Number
+            type:mongoose.Types.ObjectId
         } ,
         ips:{
-            type:Number
+            type:String
         } ,
-        job:{
-            type:Number
+        id_job:{
+            type:mongoose.Types.ObjectId
         } ,
-        maritalStates:{
-            type:Number
+        id_maritalStates:{
+            type:mongoose.Types.ObjectId
         } ,
-        nationality:{
-            type:Number
+        id_nationality:{
+            type:mongoose.Types.ObjectId
         } ,
         phone:{
             type:Number
         } ,
         regimen:{
-            type:Number
+            type:String
         } ,
         salary:{
             type:Number
         } ,
         second_last_name:{
-            type:Number
+            type:String
         } ,
         second_name:{
-            type:Number
+            type:String
         } ,
         sendEmail:{
-            type:Number
+            type:Boolean
         } 
     },
     {
