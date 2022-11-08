@@ -4,7 +4,10 @@ const DepartmentScheme = new mongoose.Schema(
     {
         name:{
             type:String
-        }
+        },
+        code:{
+            type:Number
+        } 
     },
     {
         timestamps: true,
