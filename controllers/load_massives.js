@@ -26,9 +26,7 @@ const getAll = async  (req, res)=>{
 const getById = async(req, res)=>{
     try{
         const {id} = req.params;
-
-        console.log(id)
-        const data = await load_massivesModel.findOne(id);
+        const data = await load_massivesModel.findById(id.trim());
         res.send({ data });
     }catch(e){
         handleHttpError(res,"ERROR_GET_ITEM")
