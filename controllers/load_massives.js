@@ -36,6 +36,7 @@ const getById = (req, res)=>{
 const createMassive = async(req, res)=>{
     try {
         const { body }  =  req   
+        console.log(body);
         const data = await load_massivesModel.create(body)
         res.send({ data })
     } catch (error) {

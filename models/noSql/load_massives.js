@@ -9,7 +9,7 @@ const Load_massiveScheme = new mongoose.Schema(
             type:Number
         },
         id_contractType:{
-            type:mongoose.Types.ObjectId
+            type:String
         },
         dateAdmission:{
             type:Date
@@ -18,7 +18,7 @@ const Load_massiveScheme = new mongoose.Schema(
             type:Date
         },
         id_department:{
-            type:mongoose.Types.ObjectId
+            type:String
         },
         document:{
             type:Number
@@ -36,28 +36,28 @@ const Load_massiveScheme = new mongoose.Schema(
             type:String
         } ,
         id_gender:{
-            type:mongoose.Types.ObjectId
+            type:String
         } ,
         hoursWorkedMonth:{
             type:Number
         } ,
         id_documentType:{
-            type:mongoose.Types.ObjectId
+            type:String
         } ,
         id_municipality:{
-            type:mongoose.Types.ObjectId
+            type:String
         } ,
         ips:{
             type:String
         } ,
         id_job:{
-            type:mongoose.Types.ObjectId
+            type:String
         } ,
         id_maritalStates:{
-            type:mongoose.Types.ObjectId
+            type:String
         } ,
         id_nationality:{
-            type:mongoose.Types.ObjectId
+            type:String
         } ,
         phone:{
             type:Number
