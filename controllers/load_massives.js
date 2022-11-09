@@ -23,8 +23,14 @@ const getAll = async  (req, res)=>{
  * @param {*} req 
  * @param {*} res 
  */
-const getById = (req, res)=>{
-    
+const getById = async(req, res)=>{
+    try{
+        const {id} = req;
+        const data = await load_massivesModel.findOneData(id);
+        res.send({ data });
+    }catch(e){
+        handleHttpError(res,"ERROR_GET_ITEM")
+    }   
 };
 
 
