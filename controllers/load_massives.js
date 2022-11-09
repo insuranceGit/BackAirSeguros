@@ -25,8 +25,10 @@ const getAll = async  (req, res)=>{
  */
 const getById = async(req, res)=>{
     try{
-        const {id} = req;
-        const data = await load_massivesModel.findById(id);
+        const {id} = req.params;
+
+        console.log(id)
+        const data = await load_massivesModel.findOne(id);
         res.send({ data });
     }catch(e){
         handleHttpError(res,"ERROR_GET_ITEM")
@@ -42,7 +44,6 @@ const getById = async(req, res)=>{
 const createMassive = async(req, res)=>{
     try {
         const { body }  =  req   
-        console.log(body);
         const data = await load_massivesModel.create(body)
         res.send({ data })
     } catch (error) {
