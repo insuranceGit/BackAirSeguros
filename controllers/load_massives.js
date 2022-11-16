@@ -2,6 +2,14 @@
 const { load_massivesModel } = require('../models')
 const { handleHttpError } = require("../utils/handleError")
 const { matchedData } = require( "express-validator" )
+const mongoose = require("mongoose")
+
+
+const parseId = ( id ) => {
+    return mongoose.Types.ObjectId( id )
+}
+
+
 /**
  * OBTIENE LA LISTA DE LA BASE DE DATOS
  * @param {*} req 
@@ -60,9 +68,9 @@ const update = async (req, res)=>{
     try{
         const {id} = req.params;
         const { ...body } = req.body;
-
+        
         const data = await load_massivesModel.findOneAndUpdate(
-            id, body
+            {_id : parseId(id)}, body, { update: true }
         );
         res.send({ data });
     }catch(e){
