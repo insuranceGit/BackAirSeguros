@@ -72,7 +72,7 @@ const update = async (req, res)=>{
         const data = await load_massivesModel.findOneAndUpdate(
             {_id : parseId(id)}, body, { update: true }
         );
-        res.set('Access-Control-Allow-Origin', '*');
+        //res.set('Access-Control-Allow-Origin', '*');
         res.send({ data });
     }catch(e){
         handleHttpError(res,"ERROR_GET_ITEM")

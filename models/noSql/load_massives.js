@@ -79,7 +79,10 @@ const Load_massiveScheme = new mongoose.Schema(
         } ,
         sendEmail:{
             type:Boolean
-        } 
+        } ,
+        id_position:{
+            type:String
+        } ,
     },
     {
         timestamps: true,
