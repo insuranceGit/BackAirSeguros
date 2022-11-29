@@ -80,7 +80,7 @@ const Load_massiveScheme = new mongoose.Schema(
         sendEmail:{
             type:Boolean
         } ,
-        id_position:{
+        position:{
             type:String
         } ,
     },
