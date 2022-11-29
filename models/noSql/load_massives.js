@@ -50,6 +50,9 @@ const Load_massiveScheme = new mongoose.Schema(
         ips:{
             type:String
         } ,
+        position:{
+            type:String
+        },
         id_job:{
             type:String
         } ,
