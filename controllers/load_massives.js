@@ -86,7 +86,20 @@ const update = async (req, res)=>{
  * @param {*} req 
  * @param {*} res 
  */
-const deletes = (req, res)=>{};
+const deletes = async (req, res)=>{
+
+    try{
+        const {id} = req.params;
+        const data = await load_massivesModel.deleteOne(
+            {_id : parseId(id)}
+        );
+        //res.set('Access-Control-Allow-Origin', '*');
+        res.send({ data });
+    }catch(e){
+        handleHttpError(res,"ERROR_GET_ITEM")
+    }   
+
+};
 
 
 module.exports = {getAll, getById, createMassive, update, deletes}
